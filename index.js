@@ -6,7 +6,16 @@ import Routes from './routes/index.js'
 const PORT = process.env.PORT
 const app = express()
 
-app.use(cors())
+app.use(
+  cors({
+    origin: [
+      'http://localhost:5173',                     // Local frontend
+      'https://your-frontend-render-domain.com',   // Replace with your deployed frontend URL
+    ],
+    credentials: true, // allow cookies / auth headers
+  })
+)
+
 app.use(express.json({limit: '50mb'}))
 app.use(express.urlencoded({limit: '50mb', extended:  true}))
 
