@@ -10,7 +10,7 @@ app.use(
   cors({
     origin: [
       'http://localhost:5173',                     // Local frontend
-      'https://your-frontend-render-domain.com',   // Replace with your deployed frontend URL
+      'https://meek-centaur-e074f1.netlify.app/',   // Replace with your deployed frontend URL
     ],
     credentials: true, // allow cookies / auth headers
   })
